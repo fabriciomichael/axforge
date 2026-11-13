@@ -23,6 +23,10 @@ pub fn create(name: &str) -> io::Result<()> {
     println!("✓ Migrations directory");
     println!("✓ Cargo.toml");
     println!("✓ main.rs");
+    println!("✓ app.rs");
+    println!("✓ routes.rs");
+    println!("✓ controllers/mod.rs");
+    println!("✓ controllers/home_controller.rs");
 
     Ok(())
 }
@@ -70,26 +74,63 @@ serde = {{ version = "1", features = ["derive"] }}
 
     fs::write(root.join("Cargo.toml"), cargo_toml)?;
 
-    let main_rs = r#"use axum::{routing::get, Router};
+    let main_rs = r#"mod app;
+mod routes;
+mod controllers;
 
 #[tokio::main]
 async fn main() {
-    let app = Router::new()
-        .route("/", get(|| async { "Hello from Axforge!" }));
+    let app = app::create_app();
 
     let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
         .await
-        .unwrap();
+        .expect("Failed to bind address");
 
     println!("Server running at http://127.0.0.1:3000");
 
     axum::serve(listener, app)
         .await
-        .unwrap();
+        .expect("Server error");
 }
 "#;
 
     fs::write(root.join("src/main.rs"), main_rs)?;
+
+    let app_rs = r#"use axum::Router;
+
+pub fn create_app() -> Router {
+    crate::routes::create_routes()
+}
+"#;
+
+    fs::write(root.join("src/app.rs"), app_rs)?;
+
+    let routes_rs = r#"use axum::{routing::get, Router};
+
+use crate::controllers::home_controller;
+
+pub fn create_routes() -> Router {
+    Router::new()
+        .route("/", get(home_controller::index))
+}
+"#;
+
+    fs::write(root.join("src/routes.rs"), routes_rs)?;
+
+    let controllers_mod = r#"pub mod home_controller;
+"#;
+
+    fs::write(root.join("src/controllers/mod.rs"), controllers_mod)?;
+
+    let home_controller = r#"pub async fn index() -> &'static str {
+    "Hello from Axforge!"
+}
+"#;
+
+    fs::write(
+        root.join("src/controllers/home_controller.rs"),
+        home_controller,
+    )?;
 
     Ok(())
 }
