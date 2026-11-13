@@ -1,0 +1,13 @@
+[package]
+name = "axforge"
+version = "0.1.0"
+edition = "2021"
+description = "A Rust CLI project generator for building web applications with Axum and Tera"
+license = "MIT"
+repository = "https://github.com/fabriciomichael/axforge"
+readme = "README.md"
+keywords = ["rust", "web", "axum", "tera", "cli"]
+categories = ["command-line-utilities", "web-programming"]
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
