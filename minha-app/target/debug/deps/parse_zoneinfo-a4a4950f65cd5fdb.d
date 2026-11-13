@@ -1,0 +1,11 @@
+C:\rust\axforge\minha-app\target\debug\deps\parse_zoneinfo-a4a4950f65cd5fdb.d: C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\lib.rs C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\line.rs C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\structure.rs C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\table.rs C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\transitions.rs
+
+C:\rust\axforge\minha-app\target\debug\deps\libparse_zoneinfo-a4a4950f65cd5fdb.rlib: C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\lib.rs C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\line.rs C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\structure.rs C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\table.rs C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\transitions.rs
+
+C:\rust\axforge\minha-app\target\debug\deps\libparse_zoneinfo-a4a4950f65cd5fdb.rmeta: C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\lib.rs C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\line.rs C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\structure.rs C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\table.rs C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\transitions.rs
+
+C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\lib.rs:
+C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\line.rs:
+C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\structure.rs:
+C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\table.rs:
+C:\Users\Admin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\parse-zoneinfo-0.3.1\src\transitions.rs:

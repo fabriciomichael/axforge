@@ -22,6 +22,7 @@ pub fn create(name: &str) -> io::Result<()> {
     println!("✓ Static structure");
     println!("✓ Migrations directory");
     println!("✓ Cargo.toml");
+    println!("✓ main.rs");
 
     Ok(())
 }
@@ -68,6 +69,27 @@ serde = {{ version = "1", features = ["derive"] }}
     );
 
     fs::write(root.join("Cargo.toml"), cargo_toml)?;
+
+    let main_rs = r#"use axum::{routing::get, Router};
+
+#[tokio::main]
+async fn main() {
+    let app = Router::new()
+        .route("/", get(|| async { "Hello from Axforge!" }));
+
+    let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
+        .await
+        .unwrap();
+
+    println!("Server running at http://127.0.0.1:3000");
+
+    axum::serve(listener, app)
+        .await
+        .unwrap();
+}
+"#;
+
+    fs::write(root.join("src/main.rs"), main_rs)?;
 
     Ok(())
 }
