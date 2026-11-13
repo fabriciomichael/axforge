@@ -1,3 +1,5 @@
 pub fn create(name: &str) {
-    println!("Generator received project: {}", name);
+    println!("Creating project '{}'...", name);
+
+    // Project generation will be implemented here.
 }
